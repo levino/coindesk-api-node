@@ -1,0 +1,28 @@
+{
+  "name": "coindesk-api",
+  "version": "0.0.1",
+  "description": "A node package to get data from the coindesk api.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coyno/coindesk-api-node.git"
+  },
+  "keywords": [
+    "bitcoin",
+    "coindesk",
+    "exchangerates"
+  ],
+  "author": "Levin Keller / Coyno",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coyno/coindesk-api-node/issues"
+  },
+  "homepage": "https://github.com/coyno/coindesk-api-node",
+  "dependencies": {
+    "request": "^2.51.0",
+    "underscore": "^1.7.0"
+  }
+}
