@@ -4,7 +4,13 @@ var request = require('request'),
 var CoinDeskAPI = function CoinDeskAPI(options) {
     this.options = options || { }
 };
-
+/**
+ * Calling the callback on an array of objects of the format: {time, rate} where rate is a float and time is in milliseconds.
+ * @param from
+ * @param to
+ * @param currency
+ * @param callback
+ */
 CoinDeskAPI.prototype.getPrices = function(from, to, currency, callback) {
     if (from > to) {
         callback(new Error('To date is before from date.'), []);
