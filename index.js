@@ -94,7 +94,7 @@ CoinDeskAPI.prototype.getPricesForMultipleCurrencies = function(from, to, curren
                     }
                 })
             });
-            var allRatesNice = {};
+            var allRatesNice = [];
             _.each(allRates, function(rates, time) {
                 var ratesNice = {};
                 _.each(rates, function(currencyratepair) {
@@ -102,7 +102,7 @@ CoinDeskAPI.prototype.getPricesForMultipleCurrencies = function(from, to, curren
                         ratesNice[currency] = rate;
                     });
                 });
-                allRatesNice[time] = ratesNice;
+                allRatesNice.push({time: time, rates: ratesNice});
             });
             callback(null, allRatesNice);
         }
