@@ -19,7 +19,6 @@ CoinDeskAPI.prototype.supportedCurrencies = function(callback) {
             callback(err, null);
         }
         if (body) {
-            console.log(body);
             var currencies = JSON.parse(body);
             var currencyCodeArray = _.map(currencies, function(item) {
                 return item['currency'];
@@ -45,13 +44,12 @@ CoinDeskAPI.prototype.getPricesForSingleCurrency = function(from, to, currency, 
             from = '2010-07-17';
     }
     var url = 'https://api.coindesk.com/v1/bpi/historical/close.json?start=' + from + '&end=' + to + '&currency=' + currency;
-   // console.log(url);
+
     request.get({uri: url}, function (err, response, body) {
             if (err) {
                 callback(err, null);
             }
             if (body) {
-                console.log(body);
                 var ratesValues = JSON.parse(body),
                     exchangeRatesCurrency = ratesValues.bpi;
 

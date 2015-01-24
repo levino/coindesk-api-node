@@ -1,6 +1,6 @@
 {
   "name": "coindesk-api",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A node package to get data from the coindesk api.",
   "main": "index.js",
   "scripts": {
