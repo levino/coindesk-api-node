@@ -54,7 +54,7 @@ CoinDeskAPI.prototype.getPricesForSingleCurrency = function(from, to, currency, 
                     exchangeRatesCurrency = ratesValues.bpi;
 
                 var resultArray = _.map(exchangeRatesCurrency, function (key, item) {
-                    return {time: (Date.parse(item)), rate: key};
+                    return {time: (Date.parse(item)+ 86400000), rate: key};
                 });
                 callback(null, resultArray);
             }
