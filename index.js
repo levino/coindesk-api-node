@@ -43,7 +43,7 @@ CoinDeskAPI.prototype.getPricesForSingleCurrency = function(from, to, currency, 
             //prevention of bad requests to coindesk. They only have data from '2010-07-17'.
             from = '2010-07-17';
     }
-    var url = 'https://api.coindesk.com/v1/bpi/historical/close.json?start=' + from + '&end=' + to + '&currency=' + currency;
+    var url = 'http://api.coindesk.com/v1/bpi/historical/close.json?start=' + from + '&end=' + to + '&currency=' + currency;
 
     request.get({uri: url}, function (err, response, body) {
             if (err) {
