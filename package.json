@@ -4,7 +4,7 @@
   "description": "A node package to get data from the coindesk api.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Warning: no test specified\" && exit 0"
   },
   "repository": {
     "type": "git",
