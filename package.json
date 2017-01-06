@@ -1,6 +1,6 @@
 {
   "name": "coindesk-api",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A node package to get data from the coindesk api.",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "coindesk",
     "exchangerates"
   ],
-  "author": "Levin Keller / Coyno",
+  "author": "Levin Keller",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/levino/coindesk-api-node/issues"
