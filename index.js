@@ -1,6 +1,6 @@
-var request = require('request'),
-  _ = require('underscore'),
-  async = require('async')
+var request = require('request')
+const _ = require('underscore')
+const async = require('async')
 
 var CoinDeskAPI = function CoinDeskAPI () {}
 
@@ -49,8 +49,8 @@ CoinDeskAPI.prototype.getPricesForSingleCurrency = function (from, to, currency,
       callback(err, null)
     }
     if (body) {
-      var ratesValues = JSON.parse(body),
-        exchangeRatesCurrency = ratesValues.bpi
+      var ratesValues = JSON.parse(body)
+      const exchangeRatesCurrency = ratesValues.bpi
 
       var resultArray = _.map(exchangeRatesCurrency, function (key, item) {
         return {time: (Date.parse(item) + 86400000), rate: key}
